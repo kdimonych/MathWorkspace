@@ -5,13 +5,13 @@ import matplotlib.pyplot as plt
 from scipy.signal import resample_poly
 
 # Prepare the test signal (just sine wawe)
-fs = 1000  # Initial frequency, Hz
+fs = 10  # Initial frequency, Hz
 t = np.linspace(0, 1, fs, endpoint=False)
-x = np.sin(2 * np.pi * 50 * t)  # 50 Hz sine wave
+x = np.sin(2 * np.pi * 1 * t)  # 1 Hz sine wave
 
 # Resempling: change the sampling rate from fs to (3/2)*fs
-L = 3  # Interpolation (Increase the sampling rate up to 3 times)
-M = 2  # Decimation (Decrease the sampling rate down to 2 times)
+L = 5  # Interpolation (Increase the sampling rate up to 5 times)
+M = 3  # Decimation (Decrease the sampling rate down to 3 times)
 y = resample_poly(x, up=L, down=M)
 
 # Plotting
