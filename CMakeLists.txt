@@ -7,5 +7,6 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF) # Disable compiler-specific extensions
 
+add_subdirectory(externals)
 add_subdirectory(DeepLearning)
 add_subdirectory(SignalProcessing)
